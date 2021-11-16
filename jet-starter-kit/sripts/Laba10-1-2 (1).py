@@ -76,7 +76,7 @@ def stepBackward(n):
 
 
 def saveMeasures(measures, samplesInMeasure, motorSteps, count):
-    filename = '00 mm.txt'
+    filename = '50_mm.txt'
 
     with open(filename, "w") as outfile:
         outfile.write('- Jet Lab\n\n')
@@ -101,18 +101,20 @@ def showMeasures(measures, samplesInMeasure, motorSteps, count):
 
 try:
     s=[]
-    samples=[]
+    
+
     initSpiAdc()
     initStepMotorGpio()
     step()
 
     for i in range(100):
-        for i in range(100):
-            samples.append(getAdc())
-        s.append(getMeanAdc(samples))
-        stepForward(10)
 
-    stepBackward(1000)
+        s.append(getMeanAdc((100)))
+        
+        
+        stepForward(4)
+
+    stepBackward(400)
 finally:
     deinitSpiAdc()
     deinitStepMotorGpio()

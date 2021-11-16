@@ -36,7 +36,7 @@ try:
 finally:
     deinitSpiAdc()
     s_str=[str(item) for item in s]
-    with open('00 Pa.txt', 'w') as f:
+    with open('70_Pa.txt', 'w') as f:
         f.write("- Jet Lab \n\n")
         f.write('- Experiment date = {}\n'.format(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))))
         f.write("- Number of samples in measure = 100\n")
