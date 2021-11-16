@@ -16,7 +16,8 @@ plt.minorticks_on()
 y1=np.array(y1)
 x1=np.array(acp2pa)
 coef = np.polyfit(y1,x1,1)
-line1, = plt.plot(x1,y1)
+line1, = plt.plot(x1,y1,label = 'P= 0,2756*N-221,5866 ')
+plt.legend()
 plt.grid(
     which='major'
 )
